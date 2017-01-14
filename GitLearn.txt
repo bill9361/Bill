@@ -1,0 +1,5 @@
+
+1、定位目录命令：
+cd /e/fengminbiao/LearnGit/
+2、
+
