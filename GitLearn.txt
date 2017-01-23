@@ -9,4 +9,4 @@ cd /e/fengminbiao/LearnGit/
 
 5、0001
 
-6、Creating a new branch is quick.
+6、Creating a new branch is 2222quick.2222
