@@ -11,6 +11,7 @@ $ git config --global user.email "email@example.com"
 $ git init
 3、命令git add告诉Git，把文件添加到仓库：
 $ git add readme.txt
+git add -A 提交当前目录下的所有文件
 4、用命令git commit告诉Git，把文件提交到仓库：
 $ git commit -m "wrote a readme file"
 小结：
