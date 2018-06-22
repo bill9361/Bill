@@ -7,7 +7,7 @@ $ git config --global user.email "email@example.com"
 
 二、创建本地版本库
 1、定位目录：cd /e/xxxx/xxxx
-2、echo "# MyWebService" >> README.md
+2、echo "# 项目名" >> README.md
 2、通过git init命令把这个目录变成Git可以管理的仓库：
 $ git init
 3、命令git add告诉Git，把文件添加到仓库：
