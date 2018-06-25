@@ -17,6 +17,9 @@ $ git add readme.txt
 ·  git add .  提交新文件(new)和被修改(modified)文件，不包括被删除(deleted)文件
 4、用命令git commit告诉Git，把文件提交到仓库：
 $ git commit -m "wrote a readme file"
+
+
+
 小结：
 添加文件到Git仓库，分两步：
 第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
