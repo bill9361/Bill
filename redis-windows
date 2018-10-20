@@ -1,0 +1,7 @@
+
+安装成Windows服务—开机自启
+
+打开一个cmd 窗口（管理员身份运行），使用cd命令切换目录到自己解压后文件夹的目录中（如：我的是D:\Program Files\Redis-x64-3.2.100），
+运行redis-server --service-install redis.windows.conf
+
+出现成功安装，则表明已经作为windows服务了.
