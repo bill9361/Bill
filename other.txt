@@ -1,0 +1,9 @@
+
+1、安装第三方jar(examples.jar)到本地Maven方法：
+ 1),CMD下定位到jar的目录；
+ 2),执行命令：mvn install:install-file -Dfile=examples.jar -DgroupId=com.sun.jna.examples -DartifactId=examples -Dversion=1.0 -Dpackaging=jar
+ 
+2、Springboot项目打包时，如果报 org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)：
+ 1),可能是target下的classes中的*/mapper/*.xml文件没有生成，可拷贝到target下的classes对应目录下。
+
+
