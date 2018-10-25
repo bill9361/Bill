@@ -8,4 +8,9 @@
  解决方法1, 可拷贝*/mapper/*.xml文件到target下的classes对应目录下。
  解决方法2, 可右键项目-->Maven-->Update Project解决问题。
 
+3、Springboot打包流程：
+1),maven clean
+2),右键项目-->Maven-->Update Project
+3),maven test
+4),maven builde(package)/maven install
 
