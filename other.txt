@@ -14,3 +14,14 @@
 3),maven test
 4),maven builde(package)/maven install
 
+4、SQLServer分组查询最新一条数据：
+-- 分组后查询每组最新createTime的记录
+select * from 
+(
+	select ROW_NUMBER() over(partition by dvrDeviceIp order by createTime desc) as groupRowNo,*
+       from DVR_MONITOR_CHECKED_RECORD_DEVICE 
+) dmcrdv
+ where groupRowNo=1
+
+-- 分组，为每组重新编号
+select ROW_NUMBER() over(partition by dvrDeviceIp order by createTime desc) as groupRowNo,* from DVR_MONITOR_CHECKED_RECORD_DEVICE; 
