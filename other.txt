@@ -16,7 +16,7 @@
 
    Intellj IDEA Springboot打包流程：
    1),mvn clean
-   2),右键项目-->Maven-->Reimport(相当于Eclipse中的Update Project)
+   2),mvn compile/右键项目-->Maven-->Reimport(相当于Eclipse中的Update Project)
    3),mvn test
    4),mvn package
    
