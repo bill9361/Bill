@@ -8,12 +8,25 @@
  解决方法1, 可拷贝*/mapper/*.xml文件到target下的classes对应目录下。
  解决方法2, 可右键项目-->Maven-->Update Project解决问题。
 
-3、Springboot打包流程：
+3、Eclipse Springboot打包流程：
 1),maven clean
 2),右键项目-->Maven-->Update Project
 3),maven test
 4),maven builde(package)/maven install
 
+   Intellj IDEA Springboot打包流程：
+   1),mvn clean
+   2),右键项目-->Maven-->Reimport(相当于Eclipse中的Update Project)
+   3),mvn test
+   4),mvn package
+   
+  注意：
+  Intellj IDEA 自动载入（auto import）Maven依赖的功能很好用，但有时候会碰到问题，导致pom文件修改却没有触发自动重新载入的动作，此时需要手动强制更新依赖。如下:
+    1),手动删除Project Settings里面的Libraries内容
+    2),mvn clean
+    3),右键项目-->Maven-->Reimport
+    
+    
 4、SQLServer分组查询最新一条数据：
 -- 分组后查询每组最新createTime的记录
 select * from 
