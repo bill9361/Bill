@@ -1,4 +1,4 @@
-
+一、常用命令：
 mvn test-compile  //编译测试程序
 mvn test    //运行测试
 mvn clean   //清理（删除target目录下编译内容）
@@ -10,3 +10,14 @@ mvn install //安装打包（跟package差不多）
 mvn clean compile //清除之前target编译文件并重新编译
 mvn clean package //对项目进行打包(因为配置过插件，所以jar包是可执行的)
 mvn clean install //安装项目，然后就可以使用了
+
+
+二、修改 IDEA 中 Maven 的目录：
+1、在 IDEA 的创建项目窗口，选择 Configure > Project Defaults > Settings 进行设置。
+注意：不能在打开的项目中设置，因为这样会使得设置的内容仅对当前项目生效。如下图，在打开的项目中进行设置时，会是 For current project。
+
+2、选择 Build, Execution, Deployment > Build Tools > Maven 或直接搜索 Maven，设置 Maven home directory 为之前的 Maven 路径，并设置 User setting files 和 Local repository 为之前的 settings.xml 和 repository 路径，注意勾选 Override 选项。
+
+（选做）：建议复制 settings.xml 和 repository 到其他位置，以免因 Maven 版本更换而丢失配置和依赖仓库。如复制到 ~/.m2 路径下。
+
+3、修改 Maven 的 VM Option，
