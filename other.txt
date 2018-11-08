@@ -9,10 +9,10 @@
  解决方法2, 可右键项目-->Maven-->Update Project解决问题。
 
 3、Eclipse Springboot打包流程：
-1),maven clean
-2),右键项目-->Maven-->Update Project
-3),maven test
-4),maven builde(package)/maven install
+   1),maven clean
+   2),右键项目-->Maven-->Update Project
+   3),maven test
+   4),maven builde(package)/maven install
 
    Intellj IDEA Springboot打包流程：
    1),mvn clean
