@@ -1,0 +1,7 @@
+
+/**例子：DVR_MONITOR_TASK*/
+alter table DVR_MONITOR_TASK add branchDeviceId varchar(36);
+update DVR_MONITOR_TASK set branchDeviceId=' ';
+alter table DVR_MONITOR_TASK alter column branchDeviceId varchar(36) not null;
+
+工具-->选项-->Designers-->取消“阻止保存要求重新创建表的更改”复选框选项。
