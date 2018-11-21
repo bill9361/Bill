@@ -15,3 +15,56 @@
         </execution>
     </executions>
 </plugin>
+
+
+例子：
+//--------------------------------------------
+<build>
+    <!-- 将maven项目中src源代码下的xml等资源文件编译进classes文件夹 -->
+    <resources>
+        <resource>
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </resource>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>/**</include>
+            </includes>
+        </resource>
+    </resources>
+
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <!-- 没有该配置，devtools 不生效 -->
+                <fork>true</fork>
+                <!-- 引用本地第三方jar-->
+                <!-- <includeSystemScope>true</includeSystemScope> -->
+                <!-- 打包后控制台中文乱码解决 -->
+                <jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <!-- 一款包括但不限于SpringBoot 应用jar包制作成Window Service 的Maven插件  -->
+            <groupId>cn.joylau.code</groupId>
+            <artifactId>joylau-springboot-daemon-windows</artifactId>
+            <version>1.0.RELEASE</version>
+            <executions>
+                <execution>
+                    <id>make-win-service</id>
+                    <!-- 该插件在 mvn package 的时候调用,你也可以根据不同的需求来更改，比如 install, test -->
+                    <phase>package</phase>
+                    <goals>
+                        <goal>make-win-service</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
