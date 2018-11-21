@@ -1,0 +1,17 @@
+
+<plugin>
+    <!-- 一款包括但不限于SpringBoot 应用jar包制作成Window Service 的Maven插件  -->
+    <groupId>cn.joylau.code</groupId>
+    <artifactId>joylau-springboot-daemon-windows</artifactId>
+    <version>1.0.RELEASE</version>
+    <executions>
+        <execution>
+            <id>make-win-service</id>
+            <!-- 该插件在 mvn package 的时候调用,你也可以根据不同的需求来更改，比如 install, test -->
+            <phase>package</phase>
+            <goals>
+                <goal>make-win-service</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
