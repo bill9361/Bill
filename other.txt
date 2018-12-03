@@ -47,3 +47,8 @@ select * from
 
 -- 分组，为每组重新编号
 select ROW_NUMBER() over(partition by dvrDeviceIp order by createTime desc) as groupRowNo,* from DVR_MONITOR_CHECKED_RECORD_DEVICE; 
+
+5、外部Tomcat部署安装Windows服务：
+  1),安装：cmd 进入Tomcat的bin目录：service install SmartPRO_UOB_7001
+  2),卸载：cmd 进入Tomcat的bin目录：service uninstall SmartPRO_UOB_7001
+  
