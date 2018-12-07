@@ -1,7 +1,22 @@
 
-/**例子：DVR_MONITOR_TASK*/
-alter table DVR_MONITOR_TASK add branchDeviceId varchar(36);
-update DVR_MONITOR_TASK set branchDeviceId=' ';
-alter table DVR_MONITOR_TASK alter column branchDeviceId varchar(36) not null;
 
-工具-->选项-->Designers-->取消“阻止保存要求重新创建表的更改”复选框选项。
+1、SQL Server新增不能为空的字段：
+  /**例子：DVR_MONITOR_TASK*/
+  alter table DVR_MONITOR_TASK add branchDeviceId varchar(36);
+  update DVR_MONITOR_TASK set branchDeviceId=' ';
+  alter table DVR_MONITOR_TASK alter column branchDeviceId varchar(36) not null;
+
+  工具-->选项-->Designers-->取消“阻止保存要求重新创建表的更改”复选框选项。
+
+
+2、SQL Server修改数据库名：
+  1),修改数据库逻辑名称: 
+    alter database SmartPROSCB7000 modify file(name=SmartPROSCB7000, newname=SmartPRO_7000_TEST) 
+    alter database SmartPROSCB7000 modify file(name=SmartPROSCB7000_log, newname=SmartPRO_7000_TEST_log) 
+  2),修改数据库名：
+    先将数据库设置为单个用户（属性-->选项），SmartPROSCB7000（单个用户），再右键-->重命名
+  3),分离数据库
+  4),修改数据库文件名为：SmartPRO_7000_TEST.mdf    SmartPRO_7000_TEST_log.ldf
+  5),重新附加数据库，修改“SmartPRO_7000_TEST”数据库详细信息下面的当前文件路径改为正确的路径，点确定即可
+  
+  
