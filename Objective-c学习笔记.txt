@@ -30,3 +30,6 @@
     UIImage *img1 = [UIImage imageWithContentsOfFile:imageFlie1];
     UIImage *img2 = [UIImage imageWithContentsOfFile:imageFlie2];
     
+ 
+ 二、Objective-C占位符
+ 
