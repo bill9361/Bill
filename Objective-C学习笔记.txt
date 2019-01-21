@@ -48,5 +48,5 @@ id(pointer) 	          %p
 NSObject object           %@
 string 	                  %s
 output character count    %n
-output characters 	      %[]
+output characters         %[]
 accuracy                  %%
