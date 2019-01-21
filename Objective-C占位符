@@ -1,0 +1,18 @@
+char 	                    %c
+short int 	              %hi,%ho,%hx
+unsigned short int 	      %hi,%ho,%hx
+int 	                    %i,%o,%x
+unsigned int 	            %u,%o,%x
+long int 	                %li,%lo,%lx
+unsigned long int 	      %lu,%lo,%lx
+long long int 	          %lli,%llo,%llx
+unsigned long long int 	  %llu,%llo,%llx
+float 	                  %f,%e,%g,%a
+double 	                  %f,%e,%g,%a
+long double 	            %lf,%le,%lg
+id(pointer) 	            %p
+NSObject object 	        %@
+string 	                  %s
+output character count  	%n
+output characters 	      %[]
+accuracy 	                %%
