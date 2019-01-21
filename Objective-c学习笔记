@@ -1,0 +1,32 @@
+一、XCode下面建立文件夹管理图片等资源文件：
+方法一：
+直接建立Resource的Group,通过以下代码获取：
+
+    //获取文件夹中的图片（NSBundle mainBundle可以访问项目下所有文件夹资源）
+    NSString *imageFlie1 = [[NSBundle mainBundle] pathForResource:@"btn_normal" ofType:@"png"];
+    NSString *imageFlie2 = [[NSBundle mainBundle] pathForResource:@"btn_pressed" ofType:@"png"];
+    
+    //通过NSBundle访问，推荐使用imageWithContentsOfFile方法，效率高
+    UIImage *img1 = [UIImage imageWithContentsOfFile:imageFlie1];
+    UIImage *img2 = [UIImage imageWithContentsOfFile:imageFlie2];
+    
+    
+方法二：
+(1)创建一个Settings Bundle,File-->New File-->ios-->Resource-->Settings Bundle.
+(2)将Settings Bundle改名为Resources.bundle
+(3)在Resources.bundle下创建Images文件夹
+(4)将图片拖动到Images文件夹下
+通过以下代码获取：
+
+    //访问Resources.bundle中Images的图片
+    //从mainBundle中获取Resources.bundle
+    NSString *resBundle = [[NSBundle mainBundle] pathForResource:@"Resources" ofType:@"bundle"];
+    
+    //找到对应Images文件夹下的图片
+    NSString *imageFlie1 = [[NSBundle bundleWithPath:resBundle] pathForResource:@"btn_normal" ofType:@"png" inDirectory:@"Images"];
+    NSString *imageFlie2 = [[NSBundle bundleWithPath:resBundle] pathForResource:@"btn_pressed" ofType:@"png" inDirectory:@"Images"];
+    
+    //通过NSBundle访问，推荐使用imageWithContentsOfFile方法，效率高
+    UIImage *img1 = [UIImage imageWithContentsOfFile:imageFlie1];
+    UIImage *img2 = [UIImage imageWithContentsOfFile:imageFlie2];
+    
