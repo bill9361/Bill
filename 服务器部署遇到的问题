@@ -1,6 +1,13 @@
 问题1：项目启动不久就报错：Exception in thread "AWT-Shutdown" java.lang.OutOfMemoryError: PermGen space。
 解决：
 即内存永久保存区域内存溢出
+java.lang.OutOfMemoryError: PermGen space  ---- PermGen space溢出。
+PermGen space的全称是Permanent Generation space，是指内存的永久保存区域。
+
+为什么会内存溢出，这是由于这块内存主要是被JVM存放Class和Meta信息的，Class在被Load的时候被放入PermGen space区域，它和存放Instance的Heap区域不同,
+sun的 GC不会在主程序运行期对PermGen space进行清理，所以如果你的APP会载入很多CLASS的话，就很可能出现PermGen space溢出。
+
+解决方法： 手动设置MaxPermSize大小 
 
 百度上普遍的解决方案是：
 在tomcat的安装目录下的/bin/catalina.bat 文件中，
