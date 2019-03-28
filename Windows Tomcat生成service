@@ -1,0 +1,22 @@
+打开CMD,进入Tomcat bin目录
+
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\Administrator>D:
+
+D:\>cd D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8.0.26\bin
+
+D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8.0.26\bin>service install
+ SmartPRO_8000_BGB
+Installing the service 'SmartPRO_8000_BGB' ...
+Using CATALINA_HOME:    "D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8
+.0.26"
+Using CATALINA_BASE:    "D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8
+.0.26"
+Using JAVA_HOME:        "D:\scanServer\jdk1.7.0_55"
+Using JRE_HOME:         "D:\scanServer\jdk1.7.0_55\jre"
+Using JVM:              "D:\scanServer\jdk1.7.0_55\jre\bin\server\jvm.dll"
+The service 'SmartPRO_8000_BGB' has been installed.
+
+D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8.0.26\bin>
