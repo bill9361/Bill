@@ -13,6 +13,8 @@
   1),修改数据库逻辑名称: 
     alter database SmartPROSCB7000 modify file(name=SmartPROSCB7000, newname=SmartPRO_7000_TEST) 
     alter database SmartPROSCB7000 modify file(name=SmartPROSCB7000_log, newname=SmartPRO_7000_TEST_log) 
+    或者
+    数据库右键点击属性，选择弹出框右侧的文件，双击逻辑名称列，进行修改，修改后点击确定。
   2),修改数据库名：
     先将数据库设置为单个用户（属性-->选项），SmartPROSCB7000（单个用户），再右键-->重命名
   3),分离数据库
