@@ -20,3 +20,10 @@ Using JVM:              "D:\scanServer\jdk1.7.0_55\jre\bin\server\jvm.dll"
 The service 'SmartPRO_8000_BGB' has been installed.
 
 D:\scanServer\apache-tomcat-8.0.26-8000\apache-tomcat-8.0.26\bin>
+
+如果服务安装报错，
+1、查看配置是否有问题
+2、Java环境是否正确
+如果都正确，尝试使用下面的方式：
+进入C:\Windows\System32\管理员身份运行cmd.exe
+再重复上面的步骤，一般会成功。
